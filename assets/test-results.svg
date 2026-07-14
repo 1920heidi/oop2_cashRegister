@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1098" height="552" font-family="'SF Mono','Menlo','Consolas',monospace" font-size="13">
+<rect width="1098" height="552" rx="8" fill="#1e1e1e"/>
+<rect width="1098" height="36" rx="8" fill="#323233"/>
+<rect y="18" width="1098" height="18" fill="#323233"/>
+<circle cx="20" cy="18" r="6" fill="#ff5f56"/>
+<circle cx="40" cy="18" r="6" fill="#ffbd2e"/>
+<circle cx="60" cy="18" r="6" fill="#27c93f"/>
+<text x="549.0" y="23" fill="#cccccc" text-anchor="middle" font-size="12">pytest — oop2_cashRegister</text>
+<text x="20" y="72" fill="#ffffff" xml:space="preserve">$ python3 -m pytest -v</text>
+<text x="20" y="92" fill="#569cd6" xml:space="preserve">============================= test session starts ==============================</text>
+<text x="20" y="112" fill="#d4d4d4" xml:space="preserve">platform darwin -- Python 3.12.7, pytest-8.3.3, pluggy-1.6.0 -- /Users/johntemba/.pyenv/versions/3.12.7/bin/python3</text>
+<text x="20" y="132" fill="#d4d4d4" xml:space="preserve">cachedir: .pytest_cache</text>
+<text x="20" y="152" fill="#d4d4d4" xml:space="preserve">rootdir: /Users/johntemba/Documents/Moringa/Module 4/OOP2/oop2_cashRegister</text>
+<text x="20" y="172" fill="#d4d4d4" xml:space="preserve">configfile: pytest.ini</text>
+<text x="20" y="192" fill="#d4d4d4" xml:space="preserve">collecting ... collected 14 items</text>
+<text x="20" y="212" fill="#d4d4d4" xml:space="preserve"></text>
+<text x="20" y="232" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py takes one optional argument, a discount, on initialization. PASSED [  7%]</text>
+<text x="20" y="252" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py sets an instance variable total to zero on initialization. PASSED [ 14%]</text>
+<text x="20" y="272" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py sets an instance variable items to empty list on initialization. PASSED [ 21%]</text>
+<text x="20" y="292" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py accepts a title and a price and increases the total. PASSED [ 28%]</text>
+<text x="20" y="312" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py also accepts an optional quantity. PASSED [ 35%]</text>
+<text x="20" y="332" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py doesn&quot;t forget about the previous total PASSED [ 42%]</text>
+<text x="20" y="352" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py applies the discount to the total price. PASSED [ 50%]</text>
+<text x="20" y="372" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py prints success message with updated total PASSED [ 57%]</text>
+<text x="20" y="392" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py reduces the total PASSED                [ 64%]</text>
+<text x="20" y="412" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py prints a string error message that there is no discount to apply PASSED [ 71%]</text>
+<text x="20" y="432" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py returns an array containing all items that have been added PASSED [ 78%]</text>
+<text x="20" y="452" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py returns an array containing all items that have been added, including multiples PASSED [ 85%]</text>
+<text x="20" y="472" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py subtracts the last item from the total PASSED [ 92%]</text>
+<text x="20" y="492" fill="#4ec9b0" xml:space="preserve">CashRegister in cash_register.py returns the total to 0.0 if all items have been removed PASSED [100%]</text>
+<text x="20" y="512" fill="#d4d4d4" xml:space="preserve"></text>
+<text x="20" y="532" fill="#4ec9b0" xml:space="preserve">============================== 14 passed in 0.03s ==============================</text>
+</svg>
