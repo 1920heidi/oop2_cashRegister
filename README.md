@@ -2,6 +2,61 @@
 
 Now that we’ve discussed more about object oriented design philosophies and techniques like decorators we will be looking at building more complex objects. In this case we will be building a cash register object to simulate different functions of a cash register for an e-commerce site. 
 
+## Test Results
+
+![pytest results showing all 14 tests passing](assets/test-results.svg)
+
+## What It Does
+
+`CashRegister` ([lib/cash_register.py](lib/cash_register.py)) models the core of a
+point-of-sale system. It keeps a running total, an itemized list of everything
+rung up, and an audit log of transactions so the most recent sale can be undone.
+
+### Attributes
+
+| Attribute | Description |
+| --- | --- |
+| `discount` | Percentage off the total (e.g. `20` = 20% off). Optional; defaults to `0`. Validated to be an `int` between `0` and `100` inclusive. |
+| `total` | Running price of everything rung up. Starts at `0`. |
+| `items` | Flat list with one entry per unit sold (a quantity of 3 appears 3 times). |
+| `previous_transactions` | Log of `{item, price, quantity}` records used to void the last sale. |
+
+### Methods
+
+- **`add_item(item, price, quantity=1)`** — adds `price * quantity` to the total,
+  appends one `items` entry per unit, and records the transaction.
+- **`apply_discount()`** — subtracts the discount percentage from the total and
+  prints `After the discount, the total comes to $<total>.`. With no discount set
+  it prints `There is no discount to apply.`
+- **`void_last_transaction()`** — reverses the most recent `add_item`: subtracts
+  its cost from the total and removes its units from `items`. Prints
+  `There is no transaction to void.` when there is nothing to undo.
+
+## Usage
+
+```python
+from cash_register import CashRegister
+
+register = CashRegister(20)          # 20% discount
+register.add_item("macbook air", 1000)
+register.add_item("book", 5.00, 3)   # quantity of 3
+
+register.apply_discount()            # -> After the discount, the total comes to $812.
+register.void_last_transaction()     # undoes the last add_item
+```
+
+## Running the Tests
+
+This project uses [pytest](https://docs.pytest.org/). From the project root:
+
+```bash
+pipenv install       # or: pip install pytest
+pipenv shell
+pytest -v
+```
+
+All 14 tests should pass, as shown in the screenshot above.
+
 ## Tools & Resources
 * [GitHub Repo](https://github.com/learn-co-curriculum/oop-p2-cash-register-lab)
 * [Python Classes](https://docs.python.org/3/tutorial/classes.html)
